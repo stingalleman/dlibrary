@@ -40,6 +40,11 @@ class Criteria(object):
         self.__criteria.add('INSYMBOL')
         return self
 
+    def custom(self, custom_criteria: str):
+        """:rtype: Criteria"""
+        self.__criteria.add(custom_criteria)
+        return self
+
     def get(self) -> set:
         """Get all objects that meet the criteria set.
         :rtype: set(AbstractKeyedObject)
